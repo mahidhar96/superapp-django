@@ -73,9 +73,7 @@ TEMPLATES = [
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-    ]
+    'DEFAULT_PERMISSION_CLASSES': [],
 }
 
 WSGI_APPLICATION = 'superapp.wsgi.application'
