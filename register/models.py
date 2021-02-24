@@ -17,7 +17,7 @@ class MicroApp(models.Model):
     source = models.CharField(max_length=1000)
 
     def __str__(self):
-        return "{id: "+str(self.id)+" name: "+self.name+" category: "+self.category+" type: "+self.type+" source: "+self.source+"}"
+        return "{id: "+str(self.id)+" name: "+str(self.name)+" category: "+str(self.category)+" type: "+str(self.type)+" source: "+str(self.source)+"}"
 
 class Transaction(models.Model):
     id = models.AutoField(primary_key=True)
