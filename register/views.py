@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 
 from .serializers import MicroAppSerializer,TransactionSerializer
-from .models import MicroApp,Transaction
+from .models import MicroApp,Transaction,BookingItem
 
 
 class MicroAppViewSet(viewsets.ModelViewSet):
@@ -13,4 +13,8 @@ class MicroAppViewSet(viewsets.ModelViewSet):
 
 class TransactionViewSet(viewsets.ModelViewSet):
     queryset = Transaction.objects.all().order_by('id').reverse()
+    serializer_class = TransactionSerializer
+
+class BookingItemViewSet(viewsets.ModelViewSet):
+    queryset = BookingItem.objects.all().order_by('id').reverse()
     serializer_class = TransactionSerializer

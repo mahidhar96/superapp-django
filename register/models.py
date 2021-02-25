@@ -28,3 +28,14 @@ class Transaction(models.Model):
 
     def __str__(self):
         return "{id: "+str(self.id)+" transactor: "+self.transactor+" amount: "+self.amount+" time: "+self.time+" type: "+str(self.type)+"}"
+
+class BookingItem(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=60)
+    image = models.CharField(max_length=1000)
+    type = models.CharField(max_length=60)
+    rating = models.FloatField(max_length=60)
+    additional = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return "{id: "+str(self.id)+" name: "+self.name+" type: "+self.type+" rating: "+self.rating+"}"
