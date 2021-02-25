@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets
 
-from .serializers import MicroAppSerializer,TransactionSerializer
+from .serializers import MicroAppSerializer,TransactionSerializer,BookingItemSerializer
 from .models import MicroApp,Transaction,BookingItem
 
 
@@ -17,4 +17,4 @@ class TransactionViewSet(viewsets.ModelViewSet):
 
 class BookingItemViewSet(viewsets.ModelViewSet):
     queryset = BookingItem.objects.all().order_by('id').reverse()
-    serializer_class = TransactionSerializer
+    serializer_class = BookingItemSerializer
