@@ -38,4 +38,4 @@ class BookingItem(models.Model):
     additional = models.CharField(max_length=1000)
 
     def __str__(self):
-        return "{id: "+str(self.id)+" name: "+self.name+" type: "+self.type+" rating: "+self.rating+"}"
+        return "{id: "+str(self.id)+" name: "+str(self.name)+" type: "+str(self.type)+" rating: "+str(self.rating)+"}"
